@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Game1
 {
@@ -11,7 +12,10 @@ namespace Game1
         static void Main(string[] args)
         {
             Board board = new Board();
-            board.Run();           
+            board.Run();
+            Console.ReadKey();
         }
     }
 }
+
+

@@ -13,7 +13,7 @@ namespace Game1
         {
             Row = row;
             Col = col;
-            Space = "ㅋ";
+            Space = "ㅋ ";
         }
 
         public override void Move(Board board, ConsoleKeyInfo move)
@@ -24,11 +24,7 @@ namespace Game1
                 if (MoveTrigger(this, ball, move)) 
                 {
                     if (ball.ballMovable) break;
-                    else
-                    {
-                        Row++;
-                        return;
-                    }
+                    else return;
                 }
                 else continue;
             }

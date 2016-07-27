@@ -10,8 +10,8 @@ namespace Game1
     {
     
         public virtual string Space { get; set; }
-        protected int Row { get; set; }
-        protected int Col { get; set; }
+        public int Row { get; set; }
+        public int Col { get; set; }
     }
     public class Wall : Tile
     {
@@ -19,7 +19,7 @@ namespace Game1
         {
             Row = row;
             Col = col;
-            Space = "ㅁ";
+            Space = "ㅁ ";
         }        
         
     }
@@ -30,7 +30,7 @@ namespace Game1
         {
             Row = row;
             Col = col;
-            Space = "  ";
+            Space = "   ";
         }       
     }
     public class Hole : Tile
@@ -39,7 +39,7 @@ namespace Game1
         {
             Row = row;
             Col = col;
-            Space = "○";
+            Space = "○ ";
         }        
     }
 }

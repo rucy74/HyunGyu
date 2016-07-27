@@ -15,7 +15,7 @@ namespace Game1
         {
             Row = row;
             Col = col;
-            Space = "공";
+            Space = "공 ";
         }
         public override void Move(Board board, ConsoleKeyInfo move)
         {
@@ -46,9 +46,9 @@ namespace Game1
         }
         public void BallAtHole(Board board)
         {
-            if (board.tiles[this.Row][this.Col].Space == "○")
-                this.Space = "●";
-            else this.Space = "공";            
+            if (board.tiles[this.Row][this.Col].Space == "○ ")
+                this.Space = "● ";
+            else this.Space = "공 ";            
         }
     }
 }

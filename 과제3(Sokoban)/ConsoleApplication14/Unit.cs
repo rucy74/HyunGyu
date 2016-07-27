@@ -15,14 +15,14 @@ namespace Game1
         public virtual void Move(Board board, ConsoleKeyInfo move) { }
         public bool Blocked(Board board, ConsoleKeyInfo move)
         {
-            if (((board.tiles[this.Row - 1][this.Col].Space == "ㅁ") && move.Key == ConsoleKey.UpArrow) // 벽에 막히게 하기
-              || ((board.tiles[this.Row + 1][this.Col].Space == "ㅁ") && move.Key == ConsoleKey.DownArrow)
-              || ((board.tiles[this.Row][this.Col - 1].Space == "ㅁ") && move.Key == ConsoleKey.LeftArrow)
-              || ((board.tiles[this.Row][this.Col + 1].Space == "ㅁ") && move.Key == ConsoleKey.RightArrow))
+            if (((board.tiles[this.Row - 1][this.Col].Space == "ㅁ ") && move.Key == ConsoleKey.UpArrow) // 벽에 막히게 하기
+              || ((board.tiles[this.Row + 1][this.Col].Space == "ㅁ ") && move.Key == ConsoleKey.DownArrow)
+              || ((board.tiles[this.Row][this.Col - 1].Space == "ㅁ ") && move.Key == ConsoleKey.LeftArrow)
+              || ((board.tiles[this.Row][this.Col + 1].Space == "ㅁ ") && move.Key == ConsoleKey.RightArrow))
                 return true;
             else return false;
         }
-        public void Moving(ConsoleKeyInfo move)
+        public void Moving(ConsoleKeyInfo move) 
         {           
                 switch (move.Key)
                 {
